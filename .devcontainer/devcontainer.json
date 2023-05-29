@@ -1,5 +1,5 @@
 {
-  "name": "GithubActionsDebugger",
+  "name": "RunnerCodespace",
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
@@ -11,9 +11,9 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "explorer.excludeGitIgnore": true,
         "extensions.allowInsiders": true,
-        "extensions.ignoreRecommendations": true,
-        "explorer.excludeGitIgnore": true
+        "extensions.ignoreRecommendations": true
       },
       "extensions": [
         "EditorConfig.EditorConfig",
