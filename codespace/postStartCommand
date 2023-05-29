@@ -1,4 +1,5 @@
 #!/bin/sh
 set -e
 
+# Use this to debug: /usr/sbin/sshd -d -D
 nohup sh -c '/usr/sbin/sshd -D &' > /dev/null
