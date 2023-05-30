@@ -18,7 +18,8 @@
       "extensions": [
         "EditorConfig.EditorConfig",
         "GitHub.copilot-chat",
-        "GitHub.copilot-nightly"
+        "GitHub.copilot-nightly",
+        "GitHub.vscode-github-actions"
       ]
     }
   }
