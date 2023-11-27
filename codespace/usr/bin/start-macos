@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+if [ -z "$TOKEN_FOR_ACTIONS" ]; then
+    echo "The secret TOKEN_FOR_ACTIONS is not set"
+    exit 1
+fi
+
+curl -X POST \
+  -H "Accept: application/vnd.github.v3+json" \
+  -H "Authorization: token $TOKEN_FOR_ACTIONS" \
+  https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/start-macos.yml/dispatches \
+  -d "{\"ref\":\"main\",\"inputs\":{\"codespace\":\"$CODESPACE_NAME\"}}"
