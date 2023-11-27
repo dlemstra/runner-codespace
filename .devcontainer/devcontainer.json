@@ -4,9 +4,15 @@
     "dockerfile": "Dockerfile",
     "context": ".."
   },
-  "capAdd": ["SYS_ADMIN"],
-  "securityOpt": ["apparmor:unconfined"],
-  "runArgs": ["--device=/dev/fuse"],
+  "capAdd": [
+    "SYS_ADMIN"
+  ],
+  "securityOpt": [
+    "apparmor:unconfined"
+  ],
+  "runArgs": [
+    "--device=/dev/fuse"
+  ],
   "postStartCommand": "/postStartCommand",
   "customizations": {
     "vscode": {
