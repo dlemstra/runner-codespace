@@ -19,7 +19,7 @@
       "repositories": {
         "dlemstra/runner-codespace": {
           "permissions": {
-            "workflow": "write"
+            "workflows": "write"
           }
         }
       }
