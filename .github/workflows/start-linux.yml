@@ -1,7 +1,6 @@
 name: linux
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       codespace:
@@ -9,7 +8,7 @@ on:
         required: true
 
 jobs:
-  build:
+  start-debugger:
     runs-on: ubuntu-latest
 
     steps:
