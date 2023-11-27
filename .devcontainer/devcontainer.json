@@ -15,6 +15,15 @@
   ],
   "postStartCommand": "/postStartCommand",
   "customizations": {
+    "codespaces": {
+      "repositories": {
+        "dlemstra/runner-codespace": {
+          "permissions": {
+            "actions": "write"
+          }
+        }
+      }
+    },
     "vscode": {
       "settings": {
         "explorer.excludeGitIgnore": true,
