@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+if [ -z "$$1" ]; then
+    echo "The name of the runner type is not supplied"
+    exit 1
+fi
+
+if [ -z "$TOKEN_FOR_ACTIONS" ]; then
+    echo "The secret TOKEN_FOR_ACTIONS is not set"
+    exit 1
+fi
+
+curl -X POST \
+  -H "Accept: application/vnd.github.v3+json" \
+  -H "Authorization: token $TOKEN_FOR_ACTIONS" \
+  https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/start-$1.yml/dispatches \
+  -d "{\"ref\":\"main\",\"inputs\":{\"codespace\":\"$CODESPACE_NAME\"}}"
