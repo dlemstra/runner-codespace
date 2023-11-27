@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Debug in Codespace
+    - name: Connect runner to codespace
       uses: dlemstra/github-actions-debugger@main
       with:
         token: ${{ secrets.TOKEN_FOR_CODESPACES }}
