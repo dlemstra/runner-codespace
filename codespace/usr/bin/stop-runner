@@ -3,7 +3,7 @@ set -e
 
 killall tail || true
 
-cd $(find /workspaces -mindepth 1 -type d -not -name '.*' -print -quit)
+cd $(find /workspaces -mindepth 1 -type d -not -path '*/.*' -print -quit)
 
 umount runner || true
 
