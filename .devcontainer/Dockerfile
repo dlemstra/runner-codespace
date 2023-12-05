@@ -9,6 +9,7 @@ RUN chmod 700 /usr/bin/runner-connect && \
     chmod 700 /usr/bin/shell && \
     chmod 700 /usr/bin/start-linux && \
     chmod 700 /usr/bin/start-macos && \
+    chmod 700 /usr/bin/start-macos-11 && \
     chmod 700 /usr/bin/start-runner && \
     chmod 700 /usr/bin/start-windows && \
     chmod 700 /usr/bin/stop-runner && \
