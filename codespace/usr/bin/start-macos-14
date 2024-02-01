@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-/usr/bin/start-runner macos-11
+/usr/bin/start-runner macos-14
