@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+gh codespace delete -f -c $CODESPACE_NAME
