@@ -3,10 +3,4 @@ set -e
 
 . ~/runner-info
 
-printf "\n\033[1;32mWork folder is:\033[0m \033[1;35m"
-echo $RUNNER_PATH
-printf "\033[0m\n\n"
-
-sleep 5
-
-ssh runner
+ssh runner -t "$RUNNER_SHELL"
