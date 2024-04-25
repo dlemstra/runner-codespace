@@ -1,4 +1,4 @@
-name: macos-14
+name: macos-13
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   start-debugger:
-    runs-on: macos-14
+    runs-on: macos-13
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
