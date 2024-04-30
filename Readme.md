@@ -11,5 +11,6 @@ This project can be used together with:
 This project also support starting a runner from this codespace with one of the following commmands:
 - start-linux
 - start-macos
+- start-macos-12
 - start-macos-13
 - start-windows
