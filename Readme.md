@@ -38,7 +38,7 @@ Once the runner is connected to the codespace you will see the following message
 You can now start a shell on the runner by running the `shell` command:
 
 ```console
-/workspaces/runner-codespace # start-linux
+/workspaces/runner-codespace # start-ubuntu
 /workspaces/runner-codespace # shell
 Warning: Permanently added '[localhost]:4748' (ED25519) to the list of known hosts.
 runner@fv-az530-702:~/work/runner-codespace/runner-codespace$ uname -a
