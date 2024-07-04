@@ -15,7 +15,9 @@ More information about that action can be found in the [Readme.md](https://githu
 This project can also be used to start a shell on an GitHub actions runner. The first step is to start a codespace for this project.
 Once the codespace is started you can start a shell on a runner by running one the following command:
 
-- start-linux
+- start-ubuntu
+- start-ubuntu-20
+- start-ubuntu-24
 - start-macos
 - start-macos-12
 - start-macos-13
