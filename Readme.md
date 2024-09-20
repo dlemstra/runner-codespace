@@ -35,15 +35,27 @@ Once the runner is connected to the codespace you will see the following message
 
 ![runner-connected](images/runner-connected.png)
 
-You can now start a shell on the runner by running the `shell` command:
+The command that you used to start the runner will also wait for the runner to connect to the codespace. Once the runner is connected a shell will be started on the runner.
 
 ```console
 /workspaces/runner-codespace # start-ubuntu
+Starting runner for ubuntu
+Waiting for port 4748 to open |
+Warning: Permanently added '[localhost]:4748' (ED25519) to the list of known hosts.
+runner@fv-az1766-921:~/work/runner-codespace/runner-codespace$ uname -a
+Linux fv-az1766-921 6.8.0-1014-azure #16~22.04.1-Ubuntu SMP Thu Aug 15 21:31:41 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+runner@fv-az1766-921:~/work/runner-codespace/runner-codespace$
+```
+
+When you exit the shell of the runner you can go back to the shell of the codespace by running the `shell` command:
+
+```console
+runner@fv-az1766-921:~/work/runner-codespace/runner-codespace$ exit
+logout
+Connection to localhost closed.
 /workspaces/runner-codespace # shell
 Warning: Permanently added '[localhost]:4748' (ED25519) to the list of known hosts.
-runner@fv-az530-702:~/work/runner-codespace/runner-codespace$ uname -a
-Linux fv-az530-702 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
-runner@fv-az530-702:~/work/runner-codespace/runner-codespace$
+runner@fv-az1766-921:~/work/runner-codespace/runner-codespace$
 ```
 
 ### Stop the runner that is connection to the codespace
@@ -51,10 +63,11 @@ runner@fv-az530-702:~/work/runner-codespace/runner-codespace$
 Once you are done with the runner you can disconnect from the runner by running the `exit` command. You can then stop the runner by running the `stop-runner` command:
 
 ```console
-runner@fv-az530-702:~/work/runner-codespace/runner-codespace$ exit
+runner@fv-az1766-921:~/work/runner-codespace/runner-codespace$ exit
 logout
 Connection to localhost closed.
 /workspaces/runner-codespace # stop-runner
+/workspaces/runner-codespace #
 ```
 
 ### Stop the codespace of this project
@@ -63,4 +76,5 @@ Once you are done with the codespace of this project you can stop it by running 
 
 ```console
 /workspaces/runner-codespace # stop-codespace
+/workspaces/runner-codespace #
 ```

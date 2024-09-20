@@ -1,7 +1,7 @@
 FROM alpine:3
 
 RUN apk update && \
-    apk add curl git github-cli openssh openrc sshfs vim
+    apk add curl git github-cli ncurses openssh openrc sshfs vim
 
 COPY codespace/. /
 
