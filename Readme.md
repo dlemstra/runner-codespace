@@ -17,7 +17,9 @@ Once the codespace is started you can start a shell on a runner by running one t
 
 - start-ubuntu
 - start-ubuntu-20
+- start-ubuntu-20-arm
 - start-ubuntu-24
+- start-ubuntu-24-arm
 - start-macos
 - start-macos-12
 - start-macos-13
