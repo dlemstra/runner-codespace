@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+/usr/bin/start-runner ubuntu-24-arm
