@@ -1,4 +1,4 @@
-name: linux
+name: ubuntu-24
 
 on:
   workflow_dispatch:

@@ -1,4 +1,4 @@
-name: linux
+name: ubuntu-20-arm
 
 on:
   workflow_dispatch:
