@@ -15,15 +15,15 @@ More information about that action can be found in the [Readme.md](https://githu
 This project can also be used to start a shell on an GitHub actions runner. The first step is to start a codespace for this project.
 Once the codespace is started you can start a shell on a runner by running one the following command:
 
-- start-ubuntu
 - start-ubuntu-20
-- start-ubuntu-20-arm
+- start-ubuntu-22
+- start-ubuntu-22-arm
 - start-ubuntu-24
 - start-ubuntu-24-arm
-- start-macos
 - start-macos-12
 - start-macos-13
-- start-windows
+- start-macos-14
+- start-windows-2022
 
 These commands will start a workflow in this project and that require the following secrets to be set in the repository:
 

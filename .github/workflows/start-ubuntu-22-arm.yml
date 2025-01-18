@@ -1,4 +1,4 @@
-name: ubuntu-20-arm
+name: ubuntu-22-arm
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   start-debugger:
-    runs-on: ubuntu-20.04-arm
+    runs-on: ubuntu-22.04-arm
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
