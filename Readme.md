@@ -20,9 +20,9 @@ Once the codespace is started you can start a shell on a runner by running one t
 - start-ubuntu-22-arm
 - start-ubuntu-24
 - start-ubuntu-24-arm
-- start-macos-12
 - start-macos-13
 - start-macos-14
+- start-macos-15
 - start-windows-2022
 
 These commands will start a workflow in this project and that require the following secrets to be set in the repository:
