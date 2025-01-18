@@ -1,0 +1,21 @@
+name: windows-2025
+
+on:
+  workflow_dispatch:
+    inputs:
+      codespace:
+        description: 'Name of the codespace to connect to'
+        required: true
+
+jobs:
+  start-debugger:
+    runs-on: windows-2025
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+    - name: Connect runner to codespace
+      uses: dlemstra/github-actions-debugger@main
+      with:
+        token: ${{ secrets.TOKEN_FOR_CODESPACES }}
+        codespace: ${{ inputs.codespace }}

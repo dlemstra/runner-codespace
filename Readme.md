@@ -24,6 +24,7 @@ Once the codespace is started you can start a shell on a runner by running one t
 - start-macos-14
 - start-macos-15
 - start-windows-2022
+- start-windows-2025
 
 These commands will start a workflow in this project and that require the following secrets to be set in the repository:
 
