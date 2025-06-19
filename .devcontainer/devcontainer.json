@@ -17,7 +17,7 @@
   "customizations": {
     "codespaces": {
       "repositories": {
-        "dlemstra/runner-codespace": {
+        "dvirtz/runner-codespace": {
           "permissions": {
             "actions": "write"
           }
