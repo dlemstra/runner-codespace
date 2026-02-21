@@ -1,4 +1,4 @@
-name: macos-14
+name: start-runner
 
 on:
   workflow_dispatch:
@@ -10,8 +10,12 @@ on:
         description: 'Name of the codespace to connect to'
         required: true
 
+permissions:
+  contents: read
+
 jobs:
   start-runner:
+    name: Start runner on ${{ inputs.runner }}
     runs-on: ${{ inputs.runner }}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
