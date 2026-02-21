@@ -1,0 +1,24 @@
+name: macos-14
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner:
+        description: 'Name of the runner to connect to'
+        required: true
+      codespace:
+        description: 'Name of the codespace to connect to'
+        required: true
+
+jobs:
+  start-runner:
+    runs-on: ${{ inputs.runner }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+    - name: Connect runner to codespace
+      uses: dlemstra/github-actions-debugger@main
+      with:
+        token: ${{ secrets.TOKEN_FOR_CODESPACES }}
+        codespace: ${{ inputs.codespace }}
