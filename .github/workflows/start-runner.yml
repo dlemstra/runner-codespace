@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       runner:
-        description: 'Name of the runner to connect to'
+        description: Name of the runner to use
         required: true
       codespace:
-        description: 'Name of the codespace to connect to'
+        description: Name of the codespace to connect to
         required: true
       container:
-        description: 'Name of the container to use (optional)'
+        description: Name of the container to use (optional)
         required: false
 
 permissions:
