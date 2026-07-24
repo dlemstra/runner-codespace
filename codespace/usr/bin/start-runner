@@ -11,11 +11,12 @@ if [ -z "$TOKEN_FOR_ACTIONS" ]; then
     exit 1
 fi
 
-echo "Starting runner for $1"
-
 inputs="{\"runner\":\"$1\",\"codespace\":\"$CODESPACE_NAME\""
 if [ -n "$2" ]; then
-  inputs="$inputs,\"container\":\"$2\""
+    echo "Starting runner for $1 in container $2"
+    inputs="$inputs,\"container\":\"$2\""
+else
+    echo "Starting runner for $1"
 fi
 inputs="$inputs}"
 
@@ -30,9 +31,9 @@ spin='-\|/'
 i=0
 tput civis
 while ! nc -z localhost 4748; do
-  i=$(( (i+1) % 4 ))
-  printf "\rWaiting for port 4748 to open ${spin:$i:1}"
-  sleep 0.1
+    i=$(( (i+1) % 4 ))
+    printf "\rWaiting for port 4748 to open ${spin:$i:1}"
+    sleep 0.1
 done
 tput cnorm
 
