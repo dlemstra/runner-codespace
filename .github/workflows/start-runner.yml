@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   start-runner:
-    name: Start runner on ${{ inputs.runner }}
+    name: Start runner on ${{ inputs.runner }}${{ inputs.container != '' && format(' ({0})', inputs.container) || '' }}
     runs-on: ${{ inputs.runner }}
     container: ${{ inputs.container != '' && inputs.container || null }}
     env:
