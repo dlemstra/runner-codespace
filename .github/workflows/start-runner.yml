@@ -9,9 +9,6 @@ on:
       codespace:
         description: Name of the codespace to connect to
         required: true
-      container:
-        description: Name of the container to use (optional)
-        required: false
 
 permissions:
   contents: read
@@ -19,9 +16,8 @@ permissions:
 
 jobs:
   start-runner:
-    name: Start runner on ${{ inputs.runner }}${{ inputs.container != '' && format(' ({0})', inputs.container) || '' }}
+    name: Start runner on ${{ inputs.runner }}
     runs-on: ${{ inputs.runner }}
-    container: ${{ inputs.container != '' && inputs.container || null }}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
